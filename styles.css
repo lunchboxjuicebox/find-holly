@@ -88,7 +88,7 @@ img.phone {
 
 .messages-overlay {
     height: 100%;
-    width: 100%;
+    width: 90vw;
     display: none;
     position: fixed;
     z-index: 1;
@@ -96,4 +96,37 @@ img.phone {
     left: 0;
     background-color: #000000;
     color: #ffffff;
-  }
+    padding: 5%;
+}
+
+.back-button {
+    padding: 5px 10px 5px 10px;
+}
+
+.page-title { 
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-photo {
+    background-image: url(assets/people/adam.jpeg);
+    background-size: 50px 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.stack-message {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+hr{
+    height: 1px;
+    background-color: #505050;
+    border: none;
+}

@@ -29,7 +29,7 @@ img.phone {
     background-position: bottom center;
     position: absolute;
     height: 484px;
-    min-width: 272px;
+    max-width: 272px;
     margin-top: -653px;
     margin-left: 108px;
 }
@@ -44,13 +44,25 @@ img.phone {
 }
 .signal, .battery { font-size: 12px; }
 .time { font-size: 14px; }
-.applications { padding: 13px; }
+
+.applications { 
+    padding: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .app {
-    background-color: white;
+    background-color: #ffffff;
+    margin: 10px;
     border-radius: 10px;
     height: 50px;
     width: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 @media only screen and (min-width: 480px) {
@@ -70,5 +82,6 @@ img.phone {
         position: unset;
         margin-top: 0px;
         margin-left: 0px;
+        max-width: 480px;
     }
 }

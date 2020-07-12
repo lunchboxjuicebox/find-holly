@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url('assets/twigs.jpg'); */
+    background-color: darkgray;
+    font-family: 'Roboto', sans-serif;
+}
+
+.center-wrapper {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+img.phone {
+    height: 800px;
+    border: 3px orange;
+}
+
+.screen {
+    background-image: url('assets/sunflower-phone-background.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    position: absolute;
+    height: 484px;
+    min-width: 272px;
+    margin-top: -653px;
+    margin-left: 108px;
+}
+
+.wifi-time-battery {
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    height: 15px;
+}
+.signal, .battery { font-size: 12px; }
+.time { font-size: 14px; }
+.applications { padding: 13px; }
+
+.app {
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+@media only screen and (min-width: 480px) {
+    .screen {
+      background-color: lightblue;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    img.phone {
+        display: none;
+    }
+
+    .screen {
+        height: 100vh;
+        width: 100vw;
+        position: unset;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}

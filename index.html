@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c41713964b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="messages.js"></script>
 </head>
 <body>
+
+    <div id="messages-page" class="messages-overlay">
+        <button>Back</button>
+        <h2>Messages</h2>
+    </div>
 
     <div class="center-wrapper">
         <div class="phone-container">
             <img class="phone" src="assets/cell-phone.png" alt="">
-            <div class="screen">
+            <div class="home-screen">
+
                 <div class="wifi-time-battery">
                     <span class="signal"><i class="fas fa-signal"></i> Sprimt <i class="fas fa-wifi"></i></span>
                     <span class="time">1:36 PM</span>
@@ -21,22 +29,26 @@
                 </div>
 
                 <div class="applications">
-                    <div class="app">
+                    <div class="app messages">
                         <i class="fas fa-comment"></i>
                     </div>
-                    <div class="app">
+                    <div class="app gallery">
                         <i class="fas fa-photo-video"></i>
                     </div>
-                    <div class="app">
+                    <div class="app calls">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <div class="app">
+                    <div class="app contacts">
+                        <i class="fas fa-address-book"></i>
+                    </div>
+                    <div class="app notes">
                         <i class="fas fa-sticky-note"></i>
                     </div>
-                    <div class="app">
+                    <div class="app email">
                         <i class="fas fa-envelope"></i>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

@@ -4,8 +4,8 @@
 }
 
 body {
-    /* background-image: url('assets/twigs.jpg'); */
-    background-color: darkgray;
+    background-image: url('assets/concrete.jpg');
+    /* background-color: darkgray; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -94,13 +94,42 @@ img.phone {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #000000;
+    background-color: #141414;
     color: #ffffff;
     padding: 5%;
 }
 
-.back-button {
-    padding: 5px 10px 5px 10px;
+.ellis-overlay {
+    height: 100%;
+    width: 100vw;
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #141414;
+    color: #ffffff;
+    padding: 0px;
+}
+
+.top-contact {
+    background-color: #1b1b1b;
+    padding: 4% 5% 6% 5%;
+}
+.top-contact > div {
+    margin-top: -35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-button, .individual-back-button {
+    padding: 4px 10px 4px 10px;
+    background-image: linear-gradient(#989898, #505050);
+    border: 1px solid #8a8a8a;
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 
 .page-title { 
@@ -115,7 +144,20 @@ img.phone {
     height: 50px;
     min-width: 50px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin: 10px;
+}
+
+/* .individual-message > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.message-contact-photo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
 }
 
 .stack-message {

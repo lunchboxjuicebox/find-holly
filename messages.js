@@ -13,7 +13,8 @@ function closeMessagesApp(){
 }
 
 function initializeMessagesApp(){
-    $('.stack-message').click(handleClick);
+    $('.stack-message').click(handleMessageClick);
+    $('.individual-back-button').click(closePersonMessages);
 }
 
 var people = ['Ellis', 'Dane', 'Ivor', 'Amayah'];
@@ -34,7 +35,23 @@ function createTextMessages(){
     }
 }
 
-function handleClick(){
+var currentPerson = '';
+
+function handleMessageClick(){
     var theText = $(this);
-    console.log(theText);
+    var person = theText.find('h3').text();
+    person = person.toLowerCase()
+    currentPerson = person;
+    console.log('the current person is: '+ currentPerson);
+    closeMessagesApp();
+    openPersonMessages(person);
+}
+
+function openPersonMessages(person){
+    $('.'+person+'-overlay').css("display","block");
+}
+
+function closePersonMessages(){
+    $('.'+currentPerson+'-overlay').css("display","none");
+    openMessagesApp();
 }

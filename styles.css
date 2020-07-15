@@ -45,6 +45,7 @@ img.phone {
 .wifi-time-battery.dark { background-color: #1b1b1b;}
 .signal, .battery { font-size: 12px; }
 .time { font-size: 14px; }
+.fa-battery-half { font-size: 15px; }
 
 .applications { 
     padding: 13px;
@@ -75,10 +76,12 @@ img.phone {
         margin-left: 108px;
     }
     .unlock-button-container {
-        margin-left: 106px;
-        margin-bottom: 40px;
         bottom: 0;
         position: absolute;
+        width: 270px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 35px;
     }
 }
 
@@ -112,7 +115,9 @@ img.phone {
     }
 }
 .unlock-screen {
-    background-color: blue;
+    background-image: url('assets/sunflower-phone-background.jpg');
+    background-size: cover;
+    background-position: bottom center;
     z-index: 9999;
     height: 484px;
     width: 271px;
@@ -122,6 +127,20 @@ img.phone {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #ffffff;
+    margin-top: 35px;
+}
+body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container > div:nth-child(1) > span { 
+    font-size: 50px;
+    font-weight: 300;
+}
+#unlock-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 

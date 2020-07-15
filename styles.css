@@ -2,37 +2,20 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     background-image: url('assets/concrete.jpg');
-    /* background-color: darkgray; */
     font-family: 'Roboto', sans-serif;
 }
 
 .center-wrapper {
     height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
 }
 
-img.phone {
-    height: 800px;
-    border: 3px orange;
-}
-
-.home-screen {
-    background-image: url('assets/sunflower-phone-background.jpg');
-    background-size: cover;
-    background-position: bottom center;
-    position: absolute;
-    height: 484px;
-    max-width: 272px;
-    margin-top: -653px;
-    margin-left: 108px;
-}
+img.phone { height: 800px; }
 
 .wifi-time-battery {
     padding: 6px;
@@ -46,6 +29,17 @@ img.phone {
 .signal, .battery { font-size: 12px; }
 .time { font-size: 14px; }
 .fa-battery-half { font-size: 15px; }
+
+.home-screen {
+    background-image: url('assets/sunflower-phone-background.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    position: absolute;
+    height: 484px;
+    max-width: 272px;
+    margin-top: -653px;
+    margin-left: 108px;
+}
 
 .applications { 
     padding: 13px;
@@ -67,6 +61,7 @@ img.phone {
     align-content: center;
 }
 
+/* view on desktop browser */
 @media only screen and (min-width: 480px) {
     .unlock-screen, .messages-overlay, .ellis-overlay {
         margin-top: -653px;
@@ -81,16 +76,12 @@ img.phone {
         margin-bottom: 35px;
     }
     .messages-overlay, .ellis-overlay {
-        display: none;
-        background-color: #141414;
-        overflow-y: scroll;
         height: 484px;
         width: 272px;
-        position: absolute;
     }
-    
 }
 
+/* view on mobile */
 @media only screen and (max-width: 481px) {
     img.phone {
         display: none;
@@ -105,13 +96,11 @@ img.phone {
         max-width: 480px;
     }
     .unlock-screen {
-        position: absolute;
         width: 100vw !important;
         height: 100vh !important;
         top: 0;
     }
     .messages-overlay, .ellis-overlay {
-        position: absolute;
         width: 100vw !important;
         top: 0;
     }
@@ -131,6 +120,8 @@ img.phone {
     display: none;
     background-color: #141414;
     color: #ffffff;
+    overflow-y: scroll;
+    position: absolute;
 }
 
 .unlock-screen {
@@ -142,6 +133,7 @@ img.phone {
     width: 272px;
     position: absolute;
 }
+
 .unlock-time-container {
     display: flex;
     flex-direction: column;
@@ -149,10 +141,12 @@ img.phone {
     color: #ffffff;
     margin-top: 35px;
 }
-body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container > div:nth-child(1) > span { 
+
+span.large-time { 
     font-size: 50px;
     font-weight: 300;
 }
+
 #unlock-button {
     background-color: transparent;
     border: 2px solid #ffffff;
@@ -170,9 +164,7 @@ body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container 
     align-content: center;
 }
 
-#messages-page > div:nth-child(2) {
-    padding: 5%;
-}
+#messages-page > div:nth-child(2) { padding: 5%; }
 
 .top-contact {
     background-color: #1b1b1b;
@@ -184,11 +176,12 @@ body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container 
     flex-direction: column;
     align-items: center;
 }
+
 .left, .right {
     padding: 8px;
     background-color: #383838;
     border-radius: 5px;
-    max-width: 300px;
+    max-width: 200px;
     margin: 10px;
 }
 .left {
@@ -208,7 +201,7 @@ body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container 
     justify-content: flex-end;
 }
 
-.back-button, .individual-back-button {
+.back-button, .person-back-button {
     padding: 4px 10px 4px 10px;
     background-image: linear-gradient(#989898, #505050);
     border: 1px solid #8a8a8a;
@@ -251,17 +244,3 @@ hr{
     background-color: #505050;
     border: none;
 }
-
-
-/* this is stuff that worked, saving for later
-.messages-overlay {
-    width: 271px;
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: #141414;
-    color: #ffffff;
-    margin-top: 299px;
-    margin-left: 577px;
-    height: 484px;
-} */

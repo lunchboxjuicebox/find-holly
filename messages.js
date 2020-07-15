@@ -14,7 +14,7 @@ function closeMessagesApp(){
 
 function initializeMessagesApp(){
     $('.stack-message').click(handleMessageClick);
-    $('.individual-back-button').click(closePersonMessages);
+    $('.person-back-button').click(closePersonMessages);
 }
 
 var people = ['Ellis', 'Dane', 'Ivor', 'Amayah', 'Sydney', 'Leah', 'Christopher', 'Jalissa'];

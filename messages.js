@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('div.app.messages').click(openMessagesApp);
-    $('#messages-page > button').click(closeMessagesApp);
+    $('#messages-page > div > button').click(closeMessagesApp);
     initializeMessagesApp();
 })
 

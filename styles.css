@@ -42,6 +42,7 @@ img.phone {
     color: #ffffff;
     height: 15px;
 }
+.wifi-time-battery.dark { background-color: #1b1b1b;}
 .signal, .battery { font-size: 12px; }
 .time { font-size: 14px; }
 
@@ -88,7 +89,7 @@ img.phone {
 
 .messages-overlay {
     height: 100%;
-    width: 90vw;
+    width: 100vw;
     display: none;
     position: fixed;
     z-index: 1;
@@ -96,6 +97,9 @@ img.phone {
     left: 0;
     background-color: #141414;
     color: #ffffff;
+    overflow-y: scroll;
+}
+#messages-page > div:nth-child(2) {
     padding: 5%;
 }
 
@@ -114,16 +118,16 @@ img.phone {
 
 .top-contact {
     background-color: #1b1b1b;
-    padding: 4% 5% 3% 5%;
+    padding: 5% 5% 3% 5%;
 }
 .top-contact > div {
-    margin-top: -35px;
+    margin-top: -40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .left, .right {
-    padding: 5px;
+    padding: 8px;
     background-color: #383838;
     border-radius: 5px;
     max-width: 300px;
@@ -131,6 +135,7 @@ img.phone {
 }
 .left {
     background-color: #383838;
+    border-radius: 16px 16px 16px 0px;
 }
 .left-bubble {
     display: flex;
@@ -138,6 +143,7 @@ img.phone {
 }
 .right {
     background-color: #0c5cd4;
+    border-radius: 16px 16px 0px 16px;
 }
 .right-bubble {
     display: flex;
@@ -151,6 +157,7 @@ img.phone {
     border-radius: 3px;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
+    margin-bottom: 12px;;
 }
 
 .page-title { 
@@ -193,3 +200,17 @@ hr{
     background-color: #505050;
     border: none;
 }
+
+
+/* this is stuff that worked, saving for later
+.messages-overlay {
+    width: 271px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #141414;
+    color: #ffffff;
+    margin-top: 299px;
+    margin-left: 577px;
+    height: 484px;
+} */

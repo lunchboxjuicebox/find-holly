@@ -10,4 +10,8 @@ var unlockSound = new Audio('assets/sounds/shotgun-reload.mp3');
 
 function playUnlockSound(){
     unlockSound.play();
+    setTimeout(function(){
+        unlockSound.pause();
+    },
+    455);
 }

@@ -12,6 +12,6 @@ function playTinyClick(){
         setTimeout(function(){
             tinyClick.pause();
             tinyClick.currentTime = 0;
-        }, 300)
+        }, 1000)
     });
 }

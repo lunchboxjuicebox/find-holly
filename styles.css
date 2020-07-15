@@ -104,10 +104,15 @@ img.phone {
         margin-left: 0px;
         max-width: 480px;
     }
-    .unlock-screen, .messages-overlay, .ellis-overlay {
+    .unlock-screen {
         position: absolute;
         width: 100vw !important;
         height: 100vh !important;
+        top: 0;
+    }
+    .messages-overlay, .ellis-overlay {
+        position: absolute;
+        width: 100vw !important;
         top: 0;
     }
     .unlock-button-container {

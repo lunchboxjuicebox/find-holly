@@ -1,17 +1,17 @@
 $(document).ready(function(){
     createTextMessages();
-    $('.back-button').click(playTinyClick);
+    //$('.back-button, .individual-back-button').click(playTinyClick);
 });
 
-var tinyClick = new Audio('assets/sounds/tiny-button-push.mp3');
+// var tinyClick = new Audio('assets/sounds/tiny-button-push.mp3');
 
-function playTinyClick(){
-    setTimeout(function(){
-        tinyClick.play();
+// function playTinyClick(){
+//     setTimeout(function(){
+//         tinyClick.play();
 
-        setTimeout(function(){
-            tinyClick.pause();
-            tinyClick.currentTime = 0;
-        }, 1000)
-    });
-}
+//         setTimeout(function(){
+//             tinyClick.pause();
+//             tinyClick.currentTime = 0;
+//         }, 1000)
+//     });
+// }

@@ -70,6 +70,16 @@ img.phone {
     .home-screen {
       background-color: lightblue;
     }
+    .unlock-screen {
+        margin-top: -653px;
+        margin-left: 108px;
+    }
+    .unlock-button-container {
+        margin-left: 106px;
+        margin-bottom: 40px;
+        bottom: 0;
+        position: absolute;
+    }
 }
 
 @media only screen and (max-width: 481px) {
@@ -85,7 +95,35 @@ img.phone {
         margin-left: 0px;
         max-width: 480px;
     }
+    .unlock-screen {
+        position: absolute;
+        width: 100vw !important;
+        height: 100vh !important;
+        top: 0;
+    }
+    .unlock-button-container {
+        display: flex;
+        justify-content: center;
+    }
+    #unlock-button {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 70px;
+    }
 }
+.unlock-screen {
+    background-color: blue;
+    z-index: 9999;
+    height: 484px;
+    width: 271px;
+    position: absolute;
+}
+.unlock-time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .messages-overlay {
     height: 100%;

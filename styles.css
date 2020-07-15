@@ -80,6 +80,19 @@ img.phone {
         text-align: center;
         margin-bottom: 35px;
     }
+    .messages-overlay, .ellis-overlay {
+        display: none;
+        z-index: 1;
+        background-color: #141414;
+        color: #ffffff;
+        overflow-y: scroll;
+        position: absolute;
+        height: 483px;
+        max-width: 272px;
+        margin-top: 436px;
+        margin-left: 4px;
+    }
+    
 }
 
 @media only screen and (max-width: 481px) {
@@ -110,7 +123,18 @@ img.phone {
         bottom: 0;
         margin-bottom: 70px;
     }
+    .messages-overlay, .ellis-overlay {
+        display: none;
+        background-color: #141414;
+        color: #ffffff;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+    }
 }
+
+
+
 .unlock-screen {
     background-image: url('assets/sunflower-phone-background.jpg');
     background-size: cover;
@@ -147,18 +171,7 @@ body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container 
     align-items: center;
     align-content: center;
 }
-.messages-overlay, .ellis-overlay {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background-color: #141414;
-    color: #ffffff;
-    overflow-y: scroll;
-    height: 483px;
-    max-width: 272px;
-    margin-top: 436px;
-    margin-left: 4px;
-}
+
 #messages-page > div:nth-child(2) {
     padding: 5%;
 }

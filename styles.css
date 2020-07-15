@@ -67,7 +67,7 @@ img.phone { height: 800px; }
         margin-top: -653px;
         margin-left: 108px;
     }
-    .unlock-button-container {
+    .unlock-button-container, .lock-button-container {
         bottom: 0;
         position: absolute;
         width: 270px;
@@ -104,14 +104,14 @@ img.phone { height: 800px; }
         width: 100vw !important;
         top: 0;
     }
-    .unlock-button-container {
+    .unlock-button-container, .lock-button-container {
         display: flex;
         justify-content: center;
     }
-    #unlock-button {
+    #unlock-button, #lock-button {
         position: fixed;
         bottom: 0;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
     }
     
 }
@@ -147,10 +147,9 @@ span.large-time {
     font-weight: 300;
 }
 
-#unlock-button {
+#unlock-button, #lock-button {
     background-color: transparent;
-    border: 2px solid #ffffff;
-    border-radius: 3px;
+    border: 0px;
     color: #ffffff;
     padding: 5px 10px;
     font-family: 'Roboto', sans-serif;

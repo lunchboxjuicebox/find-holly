@@ -68,9 +68,6 @@ img.phone {
 }
 
 @media only screen and (min-width: 480px) {
-    .home-screen {
-      background-color: lightblue;
-    }
     .unlock-screen {
         margin-top: -653px;
         margin-left: 108px;
@@ -144,34 +141,26 @@ body > div.center-wrapper > div > div.unlock-screen > div.unlock-time-container 
     font-size: 20px;
 }
 
-
-.messages-overlay {
-    height: 100%;
-    width: 100vw;
+.messages-wrapper, .individual-message-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.messages-overlay, .ellis-overlay {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
     background-color: #141414;
     color: #ffffff;
     overflow-y: scroll;
+    height: 483px;
+    max-width: 272px;
+    margin-top: 436px;
+    margin-left: 4px;
 }
 #messages-page > div:nth-child(2) {
     padding: 5%;
-}
-
-.ellis-overlay {
-    height: 100%;
-    width: 100vw;
-    display: none;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: #141414;
-    color: #ffffff;
-    padding: 0px;
 }
 
 .top-contact {

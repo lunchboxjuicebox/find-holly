@@ -17,9 +17,9 @@ function initializeMessagesApp(){
     $('.individual-back-button').click(closePersonMessages);
 }
 
-var people = ['Ellis', 'Dane', 'Ivor', 'Amayah'];
+var people = ['Ellis', 'Dane', 'Ivor', 'Amayah', 'Sydney', 'Leah', 'Christopher', 'Jalissa'];
 var contactPhotos = [];
-var text = ['Hey you wanna go to the beach?', 'OMG you won\'t believe what happened to me', 'When do you plan on starting the next project?', 'Hello??'];
+var text = ['Hey you wanna go to the beach?', 'OMG you won\'t believe what happened to me', 'When do you plan on starting the next project?', 'Hello??', 'I don\'t know, was kinda hoping you would', 'TACOS lets goooo', 'Alright, officially over this breakup', 'can we switch cars this weekend?'];
 
 function createTextMessages(){
     for(t=0; t<people.length; t++){

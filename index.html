@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <div class="messages-wrapper">
+    <!-- <div class="messages-wrapper">
         <div id="messages-page" class="messages-overlay">
             <div class="wifi-time-battery">
                 <span class="signal"><i class="fas fa-signal"></i> Sprimt <i class="fas fa-wifi"></i></span>
@@ -28,33 +28,14 @@
                 <h2 class="page-title">Messages</h2>
                 <hr>
                 <div class="messages-container">
-                    <!-- messages dynamically created here -->
+                    
                 </div>
             </div>
         </div>
-    </div>
-    <div class="individual-message-wrapper">
-        <div id="ellis-messages" class="ellis-overlay individual-message">
-            <div class="wifi-time-battery dark">
-                <span class="signal"><i class="fas fa-signal"></i> Sprimt <i class="fas fa-wifi"></i></span>
-                <span class="time">1:36 PM</span>
-                <span class="battery">52% <i class="fas fa-battery-half"></i></span>
-            </div>
-            <div class="top-contact">
-                <button class="individual-back-button">Back</button>
-                <div>
-                    <div class="message-contact-photo contact-photo"></div>
-                    <h3>Ellis</h3>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div class="left-bubble"><p class="left">This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.</p></div>
-                    <div class="right-bubble"><p class="right">This is a message.</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
+    <!-- <div class="individual-message-wrapper">
+        
+    </div> -->
 
     <div class="center-wrapper">
         <div class="phone-container">
@@ -103,7 +84,46 @@
                 <div class="unlock-button-container"><button id="unlock-button">UNLOCK</button></div>
 
             </div>
-        </div>
+            <div id="messages-page" class="messages-overlay">
+
+                <div class="wifi-time-battery">
+                    <span class="signal"><i class="fas fa-signal"></i> Sprimt <i class="fas fa-wifi"></i></span>
+                    <span class="battery">52% <i class="fas fa-battery-half"></i></span>
+                </div>
+
+                <div>
+                    <button class="back-button">Back</button>
+                    <h2 class="page-title">Messages</h2>
+                    <hr>
+                    <div class="messages-container">
+                        <!-- messages dynamically created here -->
+                    </div>
+                </div>
+
+            </div>
+            <div id="ellis-messages" class="ellis-overlay">
+                <div class="wifi-time-battery dark">
+                    <span class="signal"><i class="fas fa-signal"></i> Sprimt <i class="fas fa-wifi"></i></span>
+                    <span class="time">1:36 PM</span>
+                    <span class="battery">52% <i class="fas fa-battery-half"></i></span>
+                </div>
+                <div class="top-contact">
+                    <button class="individual-back-button">Back</button>
+                    <div>
+                        <div class="message-contact-photo contact-photo"></div>
+                        <h3>Ellis</h3>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="left-bubble"><p class="left">This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.This is a message.</p></div>
+                        <div class="right-bubble"><p class="right">This is a message.</p></div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+        <!-- end of phone container -->
     </div>
 
 </body>

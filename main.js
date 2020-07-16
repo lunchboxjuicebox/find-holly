@@ -16,5 +16,5 @@ function playUnlockSound(){
     setTimeout(function(){
         unlockSound.pause();
     },
-    455);
+    450);
 }

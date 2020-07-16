@@ -49,6 +49,8 @@ function handleMessageClick(){
 
 function openPersonMessages(person){
     $('.'+person+'-overlay').css("display","block");
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    $("#ellis-messages").animate({ scrollTop: $(document).height() }, 1000);
 }
 
 function closePersonMessages(){

@@ -10,9 +10,8 @@ $(document).ready(function(){
     });
 });
 
-var unlockSound = new Audio('assets/sounds/shotgun-reload.mp3');
-
 function playUnlockSound(){
+    var unlockSound = new Audio('assets/sounds/shotgun-reload.mp3');
     unlockSound.play();
     setTimeout(function(){
         unlockSound.pause();

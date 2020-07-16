@@ -49,11 +49,32 @@ function handleMessageClick(){
 
 function openPersonMessages(person){
     $('.'+person+'-overlay').css("display","block");
-    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
-    $("#ellis-messages").animate({ scrollTop: $(document).height() }, 1000);
+    scrollToBottom(person);
+}
+
+function scrollToBottom(person){
+    var screenWidth = $(window).width();
+    if(screenWidth>481){
+        $('#'+person+'-messages').animate({ scrollTop: $(document).height() }, 1000);
+        
+    }else{
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    }
 }
 
 function closePersonMessages(){
     $('.'+currentPerson+'-overlay').css("display","none");
     openMessagesApp();
+}
+
+function createPersonMessage(text){
+    var divLeftBubble = "<div class='left-bubble'></div>";
+    var pLeft = "<p class='left'>"+text+"</p>";
+    divLeftBubble = $(divLeftBubble).append(pLeft);
+    $('.chat').append(divLeftBubble);
+    scrollToBottom();
+}
+
+function createUserMessage(){
+
 }

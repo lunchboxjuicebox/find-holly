@@ -1,7 +1,6 @@
 $(document).ready(function(){
     createTextMessages();
     $('#unlock-button').click(function(){
-        //playUnlockSound();
         $('div.unlock-screen').css('display','none');
     });
     $('#lock-button').click(function(){
@@ -10,6 +9,8 @@ $(document).ready(function(){
     });
 });
 
+// not sure if i want to keep this, doesn't do well on mobile/wifi
+// could try making it play full sound instead of half a second
 function playUnlockSound(){
     var unlockSound = new Audio('assets/sounds/shotgun-reload.mp3');
     unlockSound.play();

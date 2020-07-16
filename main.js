@@ -5,17 +5,17 @@ $(document).ready(function(){
         $('div.unlock-screen').css('display','none');
     });
     $('#lock-button').click(function(){
-        //playUnlockSound();
+        playUnlockSound();
         $('div.unlock-screen').css('display','block');
     });
 });
 
-// var unlockSound = new Audio('assets/sounds/shotgun-reload.mp3');
+var unlockSound = new Audio('assets/sounds/shotgun-reload.mp3');
 
-// function playUnlockSound(){
-//     unlockSound.play();
-//     setTimeout(function(){
-//         unlockSound.pause();
-//     },
-//     455);
-// }
+function playUnlockSound(){
+    unlockSound.play();
+    setTimeout(function(){
+        unlockSound.pause();
+    },
+    455);
+}

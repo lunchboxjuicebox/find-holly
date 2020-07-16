@@ -55,7 +55,7 @@ function openPersonMessages(person){
 function scrollToBottom(person){
     var screenWidth = $(window).width();
     if(screenWidth>481){
-        $('#'+person+'-messages').animate({ scrollTop: $(document).height() }, 1000);
+        $('#'+person+'-messages').animate({ scrollTop: $(document).height()+9999 }, 1000);
         
     }else{
         $("html, body").animate({ scrollTop: $(document).height() }, 1000);
@@ -67,14 +67,29 @@ function closePersonMessages(){
     openMessagesApp();
 }
 
-function createPersonMessage(text){
+function createCurrentPersonMessage(text){
     var divLeftBubble = "<div class='left-bubble'></div>";
     var pLeft = "<p class='left'>"+text+"</p>";
     divLeftBubble = $(divLeftBubble).append(pLeft);
-    $('.chat').append(divLeftBubble);
-    scrollToBottom();
+    $('.'+currentPerson+'-chat').append(divLeftBubble);
+    scrollToBottom(currentPerson);
 }
 
-function createUserMessage(){
+function createPersonMessage(text, person){
+    var divLeftBubble = "<div class='left-bubble'></div>";
+    var pLeft = "<p class='left'>"+text+"</p>";
+    divLeftBubble = $(divLeftBubble).append(pLeft);
+    $('.'+person+'-chat').append(divLeftBubble);
+}
 
+function createUserMessage(text){
+    var divRightBubble = "<div class='right-bubble'></div>";
+    var pRight = "<p class='right'>"+text+"</p>";
+    divRightBubble = $(divRightBubble).append(pRight);
+    $('.chat').append(divRightBubble);
+    scrollToBottom(currentPerson);
+}
+
+function textMessageAlert(sender){
+    alert("New text message from "+sender);
 }

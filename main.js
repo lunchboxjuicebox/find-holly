@@ -1,5 +1,9 @@
 $(document).ready(function(){
     createTextMessages();
+    setTimeout(function(){
+        createPersonMessage('hey where the hell have you been???', 'ellis');
+        textMessageAlert('Ellis');
+    }, 10000);
     $('#unlock-button').click(function(){
         $('div.unlock-screen').css('display','none');
     });

@@ -2,8 +2,9 @@ $(document).ready(function(){
     createTextMessages();
     setTimeout(function(){
         createPersonMessage('hey where the hell have you been???', 'ellis');
+        playTextAlertSound();
         textMessageAlert('Ellis');
-    }, 10000);
+    }, 3000);
     $('#unlock-button').click(function(){
         $('div.unlock-screen').css('display','none');
     });
@@ -12,6 +13,8 @@ $(document).ready(function(){
         $('div.unlock-screen').css('display','block');
     });
 });
+
+var textAlert = new Audio('assets/sounds/text-message-alert.mp3');
 
 // not sure if i want to keep this, doesn't do well on mobile/wifi
 // could try making it play full sound instead of half a second
@@ -22,4 +25,8 @@ function playUnlockSound(){
         unlockSound.pause();
     },
     450);
+}
+
+function playTextAlertSound(){
+    textAlert.play()
 }

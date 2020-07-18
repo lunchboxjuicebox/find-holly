@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('div.unlock-screen').css('display','none');
     });
     $('#lock-button').click(function(){
-        playUnlockSound();
+        //playUnlockSound();
         $('div.unlock-screen').css('display','block');
     });
 });

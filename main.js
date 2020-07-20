@@ -4,7 +4,7 @@ $(document).ready(function(){
         createPersonMessage('hey where the hell have you been???', 'ellis');
         playTextAlertSound();
         textMessageAlert('Ellis');
-    }, 3000);
+    }, 6000);
     $('#unlock-button').click(function(){
         $('div.unlock-screen').css('display','none');
     });

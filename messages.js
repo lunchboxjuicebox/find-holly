@@ -19,7 +19,7 @@ function initializeMessagesApp(){
 
 var people = ['Ellis', 'Dane', 'Ivor', 'Amayah', 'Sydney', 'Leah', 'Christopher', 'Jalissa'];
 var contactPhotos = [];
-var text = ['Hey you wanna go to the beach?', 'OMG you won\'t believe what happened to me', 'When do you plan on starting the next project?', 'Hello??', 'I don\'t know, was kinda hoping you would', 'TACOS lets goooo', 'Alright, officially over this breakup', 'can we switch cars this weekend?'];
+//var text = ['Hey you wanna go to the beach?', 'OMG you won\'t believe what happened to me', 'When do you plan on starting the next project?', 'Hello??', 'I don\'t know, was kinda hoping you would', 'TACOS lets goooo', 'Alright, officially over this breakup', 'can we switch cars this weekend?'];
 
 function createTextMessages(){
     for(t=0; t<people.length; t++){
@@ -28,7 +28,7 @@ function createTextMessages(){
         divStackMessage = $(divStackMessage).append(divContactPhoto);
         var div = "<div></div>";
         div = $(div).append('<h3>'+people[t]+'</h3>');
-        div = $(div).append('<p>'+text[t].substr(0,50)+'</p>');
+        //div = $(div).append('<p>'+text[t].substr(0,50)+'</p>');
         divStackMessage = $(divStackMessage).append(div);
         $('.messages-container').append(divStackMessage);
         $('.messages-container').append('<hr>');
@@ -88,6 +88,15 @@ function createUserMessage(text){
     divRightBubble = $(divRightBubble).append(pRight);
     $('.chat').append(divRightBubble);
     scrollToBottom(currentPerson);
+}
+
+function bringMessageToTop(person){
+    var personIndex = people.indexOf(person);
+    var splicedPerson = people.splice(personIndex,1);
+    people.unshift(splicedPerson[0]);
+    $('.stack-message').remove();
+    $('.messages-container hr').remove();
+    createTextMessages();
 }
 
 function textMessageAlert(sender){

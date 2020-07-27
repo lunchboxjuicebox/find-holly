@@ -28,7 +28,7 @@ function createTextMessages(){
         divStackMessage = $(divStackMessage).append(divContactPhoto);
         var div = "<div></div>";
         div = $(div).append('<h3>'+people[t]+'</h3>');
-        //div = $(div).append('<p>'+text[t].substr(0,50)+'</p>');
+        div = $(div).append('<p></p>');
         divStackMessage = $(divStackMessage).append(div);
         $('.messages-container').append(divStackMessage);
         $('.messages-container').append('<hr>');
@@ -73,14 +73,20 @@ function createCurrentPersonMessage(text){
     divLeftBubble = $(divLeftBubble).append(pLeft);
     $('.'+currentPerson+'-chat').append(divLeftBubble);
     scrollToBottom(currentPerson);
+    bringMessageToTop(currentPerson);
+    textPreview(text, currentPerson);
+    createAllTextPreviews();
 }
 
+// person is all lowercase
 function createPersonMessage(text, person){
     var divLeftBubble = "<div class='left-bubble'></div>";
     var pLeft = "<p class='left'>"+text+"</p>";
     divLeftBubble = $(divLeftBubble).append(pLeft);
     $('.'+person+'-chat').append(divLeftBubble);
     bringMessageToTop(person);
+    textPreview(text, person);
+    createAllTextPreviews();
 }
 
 function createUserMessage(text){
@@ -102,6 +108,19 @@ function bringMessageToTop(person){
     $('.messages-container hr').remove();
     createTextMessages();
     $('.stack-message').click(handleMessageClick);
+}
+
+function textPreview(text, person){
+    var p = person.toLowerCase();
+    var message = $('div.'+p+'-chat div:last-child p').text();
+    $('div.'+p+' div p').text(message);
+}
+
+function createAllTextPreviews(){
+    for(p=0; p<people.length; p++){
+        var messageString = $('div.'+people[p]+'-chat div:last-child p').text();
+        textPreview(messageString, people[p]);
+    }
 }
 
 function textMessageAlert(sender){

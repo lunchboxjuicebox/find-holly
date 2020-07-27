@@ -80,6 +80,7 @@ function createPersonMessage(text, person){
     var pLeft = "<p class='left'>"+text+"</p>";
     divLeftBubble = $(divLeftBubble).append(pLeft);
     $('.'+person+'-chat').append(divLeftBubble);
+    bringMessageToTop(person);
 }
 
 function createUserMessage(text){
@@ -91,12 +92,16 @@ function createUserMessage(text){
 }
 
 function bringMessageToTop(person){
+    var p = person;
+    var firstLetter = p.slice(0,1);
+    person = p.replace(firstLetter, firstLetter.toUpperCase());
     var personIndex = people.indexOf(person);
     var splicedPerson = people.splice(personIndex,1);
     people.unshift(splicedPerson[0]);
     $('.stack-message').remove();
     $('.messages-container hr').remove();
     createTextMessages();
+    $('.stack-message').click(handleMessageClick);
 }
 
 function textMessageAlert(sender){

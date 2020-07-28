@@ -1,5 +1,6 @@
 $(document).ready(function(){
     createTextMessages();
+    createAllTextPreviews();
     setTimeout(function(){
         createPersonMessage('hey where the hell have you been???', 'ellis');
         playTextAlertSound();

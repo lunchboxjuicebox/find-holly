@@ -17,7 +17,7 @@ function initializeMessagesApp(){
     $('.person-back-button').click(closePersonMessages);
 }
 
-var people = ['Ellis', 'Dane', 'Ivor', 'Amayah', 'Sydney', 'Leah', 'Christopher', 'Jalissa'];
+var people = ['Ellis', 'Derrick', 'Mom', 'Amayah', 'Sydney', 'Leah', 'Christopher', 'Jalissa'];
 var contactPhotos = [];
 //var text = ['Hey you wanna go to the beach?', 'OMG you won\'t believe what happened to me', 'When do you plan on starting the next project?', 'Hello??', 'I don\'t know, was kinda hoping you would', 'TACOS lets goooo', 'Alright, officially over this breakup', 'can we switch cars this weekend?'];
 

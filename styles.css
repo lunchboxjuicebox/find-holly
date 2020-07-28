@@ -63,7 +63,7 @@ img.phone { height: 800px; }
 
 /* view on desktop browser */
 @media only screen and (min-width: 481px) {
-    .unlock-screen, .messages-overlay, .ellis-overlay, .dane-overlay {
+    .unlock-screen, .messages-overlay, .ellis-overlay, .derrick-overlay, .mom-overlay {
         margin-top: -653px;
         margin-left: 108px;
     }
@@ -75,7 +75,7 @@ img.phone { height: 800px; }
         text-align: center;
         margin-bottom: 35px;
     }
-    .messages-overlay, .ellis-overlay, .dane-overlay {
+    .messages-overlay, .ellis-overlay, .derrick-overlay, .mom-overlay {
         height: 484px;
         width: 272px;
     }
@@ -100,7 +100,7 @@ img.phone { height: 800px; }
         height: 100vh !important;
         top: 0;
     }
-    .messages-overlay, .ellis-overlay, .dane-overlay {
+    .messages-overlay, .ellis-overlay, .derrick-overlay, .mom-overlay {
         width: 100vw !important;
         top: 0;
     }
@@ -116,7 +116,7 @@ img.phone { height: 800px; }
     
 }
 
-.messages-overlay, .ellis-overlay, .dane-overlay {
+.messages-overlay, .ellis-overlay, .derrick-overlay, .mom-overlay {
     display: none;
     background-color: #141414;
     color: #ffffff;

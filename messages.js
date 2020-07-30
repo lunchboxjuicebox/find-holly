@@ -126,3 +126,8 @@ function createAllTextPreviews(){
 function textMessageAlert(sender){
     alert("New text message from "+sender);
 }
+
+// it's time to dynamically create these instead
+function createNameChat(){
+
+}
